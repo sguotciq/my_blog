@@ -19,8 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'article.views.default', name='default'),
-    url(r'^(?P<my_args>\d+)/$', 'article.views.detail', name='detail'),
+    # url(r'^(?P<my_args>\d+)/$', 'article.views.detail', name='detail'),
     url(r'^test/$', 'article.views.test', name='test'),
     url(r'^home/$', 'article.views.home', name='home'),
-
+    url(r'^(?P<id>\d+)/$', 'article.views.detail', name='detail'),
 ]
